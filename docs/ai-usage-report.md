@@ -51,14 +51,17 @@ Finally, I tested my website using Google Lighthouse.
 
 | ID | Tool (model) | Date | Purpose | Files affected | What you changed and how you verified it |
 |---|---|---|---|---|---|
-| C01 | ChatGPT (GPT-6) | To verify | Project searching and sorting | index.html, js/script.js, css/styles.css | Implemented search and sorting and tested different inputs. |
-| C02 | ChatGPT (GPT-6) | To verify | Contact form validation | index.html, js/script.js | Reviewed validation and tested missing fields and invalid emails. |
-| C03 | ChatGPT (GPT-6) | To verify | Quotes API integration | index.html, js/script.js, css/styles.css | Added quote fetching and error handling; tested the New Quote button. |
-| C04 | ChatGPT (GPT-6) | To verify | Visitor timer and personalized messages | index.html, js/script.js | Implemented both features and tested them in the browser. |
-| C05 | ChatGPT (GPT-6) | To verify | Dark/light mode | index.html, js/script.js, css/styles.css | Implemented theme switching and verified localStorage persistence. |
-| C06 | ChatGPT (GPT-6) | To verify | Visitor name storage | index.html, js/script.js, css/styles.css | Added name storage and verified the welcome message after refreshing. |
-| C07 | ChatGPT (GPT-6) | To verify | Performance optimization | index.html, css/styles.css, js/script.js | Reviewed code, optimized image loading, and verified results using Lighthouse. |
-| C08 | ChatGPT (GPT-6) | 2026-11-21 | AI usage documentation | docs/ai-usage-report.md | Drafted and reviewed documentation against the assignment requirements. |
+| C01 | ChatGPT (GPT-6) | 2026-11-21 | API selection and integration | `index.html`, `js/script.js` | Compared external APIs and selected a Quotes API. Added the Daily Inspiration section and tested the API response. |
+| C02 | ChatGPT (GPT-6) | 2026-11-21 | API debugging | `js/script.js` | Investigated the `[object Object]` and `undefined` errors. Reviewed the JSON structure and corrected how the quote and author were accessed. |
+| C03 | ChatGPT (GPT-6) | 2026-11-21 | Project filtering and sorting | `index.html`, `js/script.js` | Reviewed suggestions for project search and sorting. Tested search results, sorting options, and the no-results message. |
+| C04 | ChatGPT (GPT-6) | 2026-11-21 | Website visit timer | `index.html`, `css/styles.css`, `js/script.js` | Added a timer using `setInterval()` and formatted the elapsed time. Verified that the timer updated while browsing. |
+| C05 | ChatGPT (GPT-6) | 2026-11-21 | Conditional messages | `index.html`, `css/styles.css`, `js/script.js` | Added a coding-level selector with different messages for Beginner, Intermediate, and Advanced visitors. Tested each selection. |
+| C06 | ChatGPT (GPT-6) | 2026-11-21 | Dark Mode implementation | `index.html`, `css/styles.css`, `js/script.js` | Used AI hints to implement and debug a Light/Dark Mode toggle. Confirmed that the button changed the theme. |
+| C07 | ChatGPT (GPT-6) | 2026-11-21 | State management | `index.html`, `js/script.js`, `css/styles.css` | Used guidance on `localStorage` to remember theme preferences and visitor names. Reviewed how to restore saved values after refreshing. |
+| C08 | ChatGPT (GPT-6) | 2026-11-21 | GitHub troubleshooting | Git repository | Diagnosed a GitHub synchronization error and reviewed committing versus pushing. Resolved the connection issue. |
+| C09 | ChatGPT (GPT-6) | 2026-11-21 | Performance testing | `index.html`, `assets/` | Reviewed image optimization and lazy loading. Used browser performance metrics and received guidance on Lighthouse testing. |
+| C10 | ChatGPT (GPT-6) | 2026-11-21 | AI usage documentation | `docs/ai-usage-report.md` | Organized AI-assisted tasks into a Markdown usage log and reviewed the entries for accuracy. |
+
 
 ## 6. AI Usage Declaration
 
