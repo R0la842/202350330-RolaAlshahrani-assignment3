@@ -9,8 +9,9 @@
 5. [Project Structure](#5-project-structure)
 6. [How to Run Locally](#6-how-to-run-locally)
 7. [Testing and Error Handling](#7-testing-and-error-handling)
-8. [Technical Documentation](#9-technical-documentation)
-9. [AI Usage](#10-ai-usage)
+8. [User Experience](#8-User-Experience)
+9. [Technical Documentation](#9-technical-documentation)
+10. [AI Usage](#10-ai-usage)
 
 ---
 
@@ -104,14 +105,24 @@ The following features can be tested manually:
 
 These checks help verify that the interactive features behave as expected and provide appropriate feedback to visitors.
 
+## 8. User Experience
 
-## 8. Technical Documentation
+The portfolio was designed to provide a simple and user-friendly experience.
+
+- Clear navigation between the About Me, Projects, and Contact sections.
+- Project search and sorting to help visitors find projects easily.
+- Light and Dark Mode for different viewing preferences.
+- Personalized welcome messages using saved visitor names.
+- Helpful feedback messages for form validation and API errors.
+- Responsive layout for different screen sizes.
+- Hover effects to improve visual interaction.
+## 9. Technical Documentation
 
 Detailed technical information about the website is available in [Technical Documentation](docs/technical-documentation.md).
 
 This document explains the project structure, HTML sections, CSS styling, JavaScript functionality, API integration, state management, performance optimization, and testing.
 
-## 9. AI Usage
+## 10. AI Usage
 
 ChatGPT (GPT-6) was used during this assignment to support problem-solving, debugging, code review, performance optimization, and documentation.
 
