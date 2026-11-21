@@ -41,8 +41,8 @@ The website consists of three main sections: About Me, Projects, and Contact.
 
 ## 3. Technologies Used
 
-- **HTML5:** Defines the website structure, content, navigation, forms, and interactive elements.
-- **CSS3:** Controls styling, responsive design, dark mode, hover effects, and transitions.
+- **HTML:** Defines the website structure, content, navigation, forms, and interactive elements.
+- **CSS:** Controls styling, responsive design, dark mode, hover effects, and transitions.
 - **JavaScript:** Implements navigation, API requests, search, sorting, validation, timers, and state management.
 - **Quotes API:** Provides inspirational quotes dynamically.
 - **localStorage:** Stores visitor names and theme preferences.
