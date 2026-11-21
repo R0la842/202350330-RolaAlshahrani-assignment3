@@ -304,6 +304,30 @@ body.dark-mode textarea {
     color: white;
     border-color: #666;
 }
+.visitor-name {
+    margin-top: 12px;
+}
+
+#visitorName {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+}
+
+#saveNameBtn {
+    padding: 8px 14px;
+    margin-left: 5px;
+}
+
+#welcomeMessage {
+    font-size: 14px;
+    color: #4a4e69;
+    margin-top: 8px;
+}
+
+body.dark-mode #welcomeMessage {
+    color: #d5caff;
+}
 
 
 /* Responsive layout */

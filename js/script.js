@@ -198,3 +198,24 @@ themeToggle.addEventListener("click", () => {
 
     updateThemeButton();
 });
+const visitorName = document.getElementById("visitorName");
+const saveNameBtn = document.getElementById("saveNameBtn");
+const welcomeMessage = document.getElementById("welcomeMessage");
+
+const savedName = localStorage.getItem("visitorName");
+
+if (savedName) {
+    visitorName.value = savedName;
+    welcomeMessage.textContent = `Welcome back, ${savedName}!`;
+}
+
+saveNameBtn.addEventListener("click", () => {
+    const name = visitorName.value.trim();
+
+    if (name) {
+        localStorage.setItem("visitorName", name);
+        welcomeMessage.textContent = `Welcome, ${name}!`;
+    } else {
+        welcomeMessage.textContent = "Please enter your name.";
+    }
+});
