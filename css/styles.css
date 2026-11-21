@@ -234,6 +234,12 @@ box-shadow: none;
 background-color: white;
 color: #222;
 }
+#visitTimer {
+    font-size: 13px;
+    color: #777;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
 
 /* Responsive layout */
 @media (max-width: 768px) {

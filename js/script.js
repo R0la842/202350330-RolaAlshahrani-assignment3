@@ -149,3 +149,14 @@ sortProjects.addEventListener("change", function () {
 
     projects.forEach(project => container.appendChild(project));
 });
+let secondsOnSite = 0;
+
+setInterval(() => {
+    secondsOnSite++;
+
+    const minutes = Math.floor(secondsOnSite / 60);
+    const seconds = secondsOnSite % 60;
+
+    document.getElementById("visitTimer").textContent =
+        `⏱️ Time on Site: ${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+}, 1000);
