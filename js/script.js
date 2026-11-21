@@ -163,13 +163,13 @@ setInterval(() => {
 const levelMessage = document.getElementById("levelMessage");
 
 document.getElementById("beginnerBtn").addEventListener("click", () => {
-levelMessage.textContent =
-"Welcome, Beginner! Explore my projects and start your coding journey!";
+    levelMessage.textContent =
+        "Welcome, Beginner! Explore my projects and start your coding journey!";
 });
 
 document.getElementById("advancedBtn").addEventListener("click", () => {
-levelMessage.textContent =
-"Welcome, Advanced Developer! Explore my projects and discover more complex ideas!";
+    levelMessage.textContent =
+        "Welcome, Advanced Developer! Explore my projects and discover more complex ideas!";
 });
 const themeToggle = document.getElementById("themeToggle");
 
