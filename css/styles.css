@@ -1,4 +1,4 @@
-/* Global box-sizing reset */
+/* General Styles */
 * {
     box-sizing: border-box;
 }
@@ -29,105 +29,165 @@ main {
     margin: auto;
 }
 
-/* Section switching */
-main>.portfolio-section {
+/* Section Switching */
+main > .portfolio-section {
     display: none;
 }
 
-main>#about.active,
-main>#contact.active {
+main > #about.active,
+main > #contact.active {
     display: block;
 }
 
-main>#projects.active {
+main > #projects.active {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px;
-    align-items: start;
-
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
 }
 
-/* Projects heading */
-#projects h2 {
-    grid-column: 1 / -1;
-}
-
-/* Project cards */
-#projects .project {
-    background-color: white;
-    border: 1px solid #d9dce3;
-    border-radius: 10px;
-    padding: 20px;
-    grid-column: 1 / -1;
-
-
-}
-
-#projects img {
-    width: 200px;
-    max-width: 100%;
-    height: 120px;
-}
-
-/* Project search */
-.search-box {
-    grid-column: 1 / -1;
+/* Navigation */
+.section-nav {
     display: flex;
-    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     gap: 10px;
-    width: 100%;
-    margin-bottom: 0;
+    margin: 20px 0;
 }
 
-#searchInput {
-    width: 100%;
-    max-width: none;
-    min-width: 0;
-    flex: 1;
+/* Buttons */
+button {
+    padding: 8px;
+    background-color: #4a4e69;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #8e7dbe;
+    transform: translateY(-3px);
+}
+
+.section-nav button {
+    padding: 8px 14px;
 }
 
 #searchButton {
     flex-shrink: 0;
 }
 
-#searchButton:hover {
-    background-color: #8e7dbe;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+#newQuoteButton {
+    margin-top: 15px;
+    padding: 10px 18px;
+}
+
+.level-selector button {
+    padding: 8px 15px;
+    margin-right: 8px;
+}
+
+#themeToggle {
+    padding: 8px 14px;
+    margin-top: 5px;
+}
+
+#saveNameBtn {
+    padding: 8px 14px;
+    margin-left: 5px;
+}
+
+/* Project Section */
+#projects h2 {
+    margin-bottom: 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+#projects .project {
+    min-width: 0;
+    background-color: white;
+    border: 1px solid #d9dce3;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+#projects .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+#projects img {
+    width: 200px;
+    max-width: 100%;
+    height: 120px;
+    object-fit: contain;
+}
+
+/* Project Search */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+#searchInput {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
 }
 
 #noResults {
-    grid-column: 1 / -1;
     color: #777;
     font-size: 14px;
 }
 
-/* Navigation buttons */
-.section-nav {
-    display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin: 20px 0;
-}
-
-.section-nav button {
-    padding: 8px 14px;
+/* Sorting Dropdown */
+#sortProjects {
+    padding: 8px;
     background-color: #4a4e69;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: inherit;
+    font-size: 13px;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
 }
 
-.section-nav button:hover {
+#sortProjects:hover {
     background-color: #8e7dbe;
     transform: translateY(-3px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Form */
+#sortProjects option {
+    background-color: white;
+    color: #222;
+}
+
+/* Level Selection */
+.level-selector {
+    margin-bottom: 15px;
+}
+
+#levelMessage {
+    margin-top: 12px;
+    color: #4a4e69;
+    font-size: 14px;
+}
+
+/* Contact Form */
 form {
     display: flex;
     flex-direction: column;
@@ -141,38 +201,25 @@ textarea {
     border-radius: 5px;
 }
 
-button {
-    padding: 8px;
-    background-color: #4a4e69;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+form button[type="submit"]:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 
-button:hover {
-    background-color: #3d405b;
-}
-
-/* Footer */
-footer {
-    margin-top: 25px;
-}
-/* Daily Inspiration Card */
+/* Daily Inspiration */
 .inspiration-card {
-background-color: #ffffff;
-border: 1px solid #d9dce3;
-border-radius: 12px;
-padding: 18px;
-margin-top: 20px;
-height: 220px;
-overflow-y: auto;
-scrollbar-width: none;
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    background-color: white;
+    border: 1px solid #d9dce3;
+    border-radius: 12px;
+    padding: 18px;
+    margin-top: 20px;
+    height: 220px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .inspiration-card::-webkit-scrollbar {
-display: none;
+    display: none;
 }
 
 .inspiration-card h3 {
@@ -194,84 +241,30 @@ display: none;
     margin-top: 12px;
 }
 
-#newQuoteButton {
-    margin-top: 15px;
-    padding: 10px 18px;
-    transition: background-color 0.3s ease,
-                transform 0.3s ease;
-}
-
-#newQuoteButton:hover {
-    background-color: #8e7dbe;
-    transform: translateY(-3px);
-}
-#sortProjects {
-padding: 8px;
-background-color: #4a4e69;
-color: white;
-border: none;
-outline: none;
-border-radius: 5px;
-cursor: pointer;
-font-family: Arial, sans-serif;
-font-size: 13px;
-box-shadow: none;
-transition: background-color 0.3s ease,
-transform 0.3s ease;
-}
-
-#sortProjects:hover {
-background-color: #8e7dbe;
-transform: translateY(-3px);
-}
-
-#sortProjects:focus {
-outline: none;
-box-shadow: none;
-}
-
-#sortProjects option {
-background-color: white;
-color: #222;
-}
+/* Visitor Timer */
 #visitTimer {
     font-size: 13px;
     color: #777;
     margin-top: 5px;
     margin-bottom: 10px;
 }
-.level-selector {
-grid-column: 1 / -1;
-margin-bottom: 15px;
+
+/* Visitor Name */
+.visitor-name {
+    margin-top: 12px;
 }
 
-.level-selector button {
-padding: 8px 15px;
-margin-right: 8px;
-transition: background-color 0.3s ease, transform 0.3s ease;
+#visitorName {
+    padding: 8px;
 }
 
-.level-selector button:hover {
-background-color: #8e7dbe;
-transform: translateY(-3px);
+#welcomeMessage {
+    font-size: 14px;
+    color: #4a4e69;
+    margin-top: 8px;
 }
 
-#levelMessage {
-margin-top: 12px;
-color: #4a4e69;
-font-size: 14px;
-}
-#themeToggle {
-    padding: 8px 14px;
-    border-radius: 5px;
-    margin-top: 5px;
-    transition: background-color 0.3s ease;
-}
-
-#themeToggle:hover {
-    background-color: #8e7dbe;
-}
-
+/* Dark Mode */
 body.dark-mode {
     background-color: #1e1e2f;
     color: #f5f5f5;
@@ -280,11 +273,11 @@ body.dark-mode {
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
-body.dark-mode #levelMessage {
+body.dark-mode #levelMessage,
+body.dark-mode #welcomeMessage {
     color: #d5caff;
 }
 
-body.dark-mode .project,
 body.dark-mode #projects .project,
 body.dark-mode .inspiration-card {
     background-color: #2d2d44;
@@ -304,40 +297,15 @@ body.dark-mode textarea {
     color: white;
     border-color: #666;
 }
-.visitor-name {
-    margin-top: 12px;
+
+/* Footer */
+footer {
+    margin-top: 25px;
 }
 
-#visitorName {
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #bbb;
-}
-
-#saveNameBtn {
-    padding: 8px 14px;
-    margin-left: 5px;
-}
-
-#welcomeMessage {
-    font-size: 14px;
-    color: #4a4e69;
-    margin-top: 8px;
-}
-
-body.dark-mode #welcomeMessage {
-    color: #d5caff;
-}
-
-
-/* Responsive layout */
+/* Responsive Design */
 @media (max-width: 768px) {
-    main>#projects.active {
-        grid-template-columns: 1fr;
-    }
-}
-@media (max-width: 768px) {
-    #projects .project {
+    .project-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -358,27 +326,8 @@ body.dark-mode #welcomeMessage {
     .section-nav {
         gap: 6px;
     }
-}
 
-form button[type="submit"] {
-
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0.3s ease;
-
-}
-
-form button[type="submit"]:hover {
-    background-color: #8e7dbe;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-}
-
-/* Project cards hover effect */
-#projects .project {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#projects .project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+    .search-box {
+        flex-wrap: wrap;
+    }
 }
