@@ -1,0 +1,280 @@
+/* Global box-sizing reset */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    background-color: #f5f7fb;
+    color: #222;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #4a4e69;
+}
+
+h2 {
+    color: #3d405b;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Section switching */
+main>.portfolio-section {
+    display: none;
+}
+
+main>#about.active,
+main>#contact.active {
+    display: block;
+}
+
+main>#projects.active {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    align-items: start;
+
+}
+
+/* Projects heading */
+#projects h2 {
+    grid-column: 1 / -1;
+}
+
+/* Project cards */
+#projects .project {
+    background-color: white;
+    border: 1px solid #d9dce3;
+    border-radius: 10px;
+    padding: 20px;
+
+
+}
+
+#projects img {
+    width: 200px;
+    max-width: 100%;
+    height: 120px;
+}
+
+/* Project search */
+.search-box {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+#searchInput {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    flex: 1;
+}
+
+#searchButton {
+    flex-shrink: 0;
+}
+
+#searchButton:hover {
+    background-color: #8e7dbe;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+#noResults {
+    grid-column: 1 / -1;
+    color: #777;
+    font-size: 14px;
+}
+
+/* Navigation buttons */
+.section-nav {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.section-nav button {
+    padding: 8px 14px;
+    background-color: #4a4e69;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.section-nav button:hover {
+    background-color: #8e7dbe;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+textarea {
+    padding: 8px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+button {
+    padding: 8px;
+    background-color: #4a4e69;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3d405b;
+}
+
+/* Footer */
+footer {
+    margin-top: 25px;
+}
+/* Daily Inspiration Card */
+.inspiration-card {
+background-color: #ffffff;
+border: 1px solid #d9dce3;
+border-radius: 12px;
+padding: 18px;
+margin-top: 20px;
+height: 220px;
+overflow-y: auto;
+scrollbar-width: none;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.inspiration-card::-webkit-scrollbar {
+display: none;
+}
+
+.inspiration-card h3 {
+    color: #4a4e69;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#quoteText {
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.8;
+    color: #333;
+}
+
+#quoteAuthor {
+    font-size: 14px;
+    color: #777;
+    margin-top: 12px;
+}
+
+#newQuoteButton {
+    margin-top: 15px;
+    padding: 10px 18px;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+#newQuoteButton:hover {
+    background-color: #8e7dbe;
+    transform: translateY(-3px);
+}
+#sortProjects {
+padding: 8px 14px;
+background-color: #4a4e69;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-family: Arial, sans-serif;
+transition: background-color 0.3s ease,
+transform 0.3s ease;
+}
+
+#sortProjects:hover {
+background-color: #8e7dbe;
+transform: translateY(-3px);
+}
+
+#sortProjects option {
+background-color: white;
+color: #222;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    main>#projects.active {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 768px) {
+    #projects .project {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .section-nav {
+        gap: 6px;
+    }
+}
+
+form button[type="submit"] {
+
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0.3s ease;
+
+}
+
+form button[type="submit"]:hover {
+    background-color: #8e7dbe;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Project cards hover effect */
+#projects .project {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
