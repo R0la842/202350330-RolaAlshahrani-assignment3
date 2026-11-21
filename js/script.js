@@ -171,3 +171,30 @@ document.getElementById("advancedBtn").addEventListener("click", () => {
 levelMessage.textContent =
 "Welcome, Advanced Developer! Explore my projects and discover more complex ideas!";
 });
+const themeToggle = document.getElementById("themeToggle");
+
+function updateThemeButton() {
+    const isDark = document.body.classList.contains("dark-mode");
+
+    themeToggle.textContent = isDark
+        ? "☀️ Light Mode"
+        : "🌙 Dark Mode";
+}
+
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+    document.body.classList.add("dark-mode");
+}
+
+updateThemeButton();
+
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    const isDark = document.body.classList.contains("dark-mode");
+
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+
+    updateThemeButton();
+});
