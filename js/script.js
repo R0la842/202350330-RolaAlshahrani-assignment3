@@ -160,3 +160,14 @@ setInterval(() => {
     document.getElementById("visitTimer").textContent =
         `⏱️ Time on Site: ${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
 }, 1000);
+const levelMessage = document.getElementById("levelMessage");
+
+document.getElementById("beginnerBtn").addEventListener("click", () => {
+levelMessage.textContent =
+"Welcome, Beginner! Explore my projects and start your coding journey!";
+});
+
+document.getElementById("advancedBtn").addEventListener("click", () => {
+levelMessage.textContent =
+"Welcome, Advanced Developer! Explore my projects and discover more complex ideas!";
+});

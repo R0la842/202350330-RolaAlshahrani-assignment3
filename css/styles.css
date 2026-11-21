@@ -240,6 +240,27 @@ color: #222;
     margin-top: 5px;
     margin-bottom: 10px;
 }
+.level-selector {
+grid-column: 1 / -1;
+margin-bottom: 15px;
+}
+
+.level-selector button {
+padding: 8px 15px;
+margin-right: 8px;
+transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.level-selector button:hover {
+background-color: #8e7dbe;
+transform: translateY(-3px);
+}
+
+#levelMessage {
+margin-top: 12px;
+color: #4a4e69;
+font-size: 14px;
+}
 
 /* Responsive layout */
 @media (max-width: 768px) {
