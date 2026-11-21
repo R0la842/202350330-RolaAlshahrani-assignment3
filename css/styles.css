@@ -30,16 +30,16 @@ main {
 }
 
 /* Section Switching */
-main > .portfolio-section {
+main>.portfolio-section {
     display: none;
 }
 
-main > #about.active,
-main > #contact.active {
+main>#about.active,
+main>#contact.active {
     display: block;
 }
 
-main > #projects.active {
+main>#projects.active {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     gap: 20px;
@@ -63,7 +63,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease,
-                transform 0.3s ease;
+        transform 0.3s ease;
 }
 
 button:hover {
@@ -118,7 +118,7 @@ button:hover {
     border-radius: 10px;
     padding: 20px;
     transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
+        box-shadow 0.3s ease;
 }
 
 #projects .project:hover {
@@ -163,7 +163,7 @@ button:hover {
     font-family: inherit;
     font-size: 13px;
     transition: background-color 0.3s ease,
-                transform 0.3s ease;
+        transform 0.3s ease;
 }
 
 #sortProjects:hover {
