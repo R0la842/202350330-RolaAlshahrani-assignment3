@@ -143,7 +143,6 @@ The following features were tested manually:
 - Restoring saved theme and visitor name.
 - Displaying project images.
 
-Google Lighthouse was also used to evaluate website performance, accessibility, best practices, and SEO.
 
 ## 8. Limitations
 
