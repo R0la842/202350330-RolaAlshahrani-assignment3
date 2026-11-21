@@ -58,6 +58,7 @@ main>#projects.active {
     border: 1px solid #d9dce3;
     border-radius: 10px;
     padding: 20px;
+    grid-column: 1 / -1;
 
 
 }
@@ -205,13 +206,16 @@ display: none;
     transform: translateY(-3px);
 }
 #sortProjects {
-padding: 8px 14px;
+padding: 8px;
 background-color: #4a4e69;
 color: white;
 border: none;
+outline: none;
 border-radius: 5px;
 cursor: pointer;
 font-family: Arial, sans-serif;
+font-size: 13px;
+box-shadow: none;
 transition: background-color 0.3s ease,
 transform 0.3s ease;
 }
@@ -219,6 +223,11 @@ transform 0.3s ease;
 #sortProjects:hover {
 background-color: #8e7dbe;
 transform: translateY(-3px);
+}
+
+#sortProjects:focus {
+outline: none;
+box-shadow: none;
 }
 
 #sortProjects option {
